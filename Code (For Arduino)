@@ -1,0 +1,23 @@
+CODE:
+
+
+
+
+int water; //random variable 
+void setup() {
+  pinMode(3,OUTPUT); //digital bata relay ma janey signal (vcc)output 
+  pinMode(6,INPUT); //sensor ko D0 bata aaune input 
+}
+
+void loop() { 
+  water = digitalRead(6);  // senson bata aaune signal receive huney 
+  if(water == HIGH) 
+  {
+  digitalWrite(3,LOW);
+  }
+  else
+  {
+  digitalWrite(3,HIGH);
+  }
+  delay(400); 
+}
